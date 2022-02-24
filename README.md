@@ -12,9 +12,9 @@
   * [Resources](#resources)
 
 # CS 1632 - Software Quality Assurance
-Fall Semester 2021
+Spring Semester 2022
 
-DUE: Oct 25 (Monday), 2021 9:30 AM
+DUE: Mar 15 (Tuesday), 2022 1:00 PM
 
 **GitHub Classroom Link:** TBD
 
@@ -34,7 +34,7 @@ shared .side project file. So it is especially important that your pull before
 opening the project file and push immediately after you have modified and saved
 the project file. Otherwise, you may get merge conflicts. Merging conflicts is
 possible by using the technique I went over with the
-[Using\_Git](https://github.com/wonsunahn/CS1632_Fall2021/blob/master/lectures/Using_Git.pdf)
+[Using\_Git](https://github.com/wonsunahn/CS1632_Spring2022/blob/master/lectures/Using_Git.pdf)
 slides, but it's best to avoid it.  In the case of a merge conflict, the .side
 file is in JSON format, so it shouldn't be too difficult to patch up.
 
@@ -136,7 +136,7 @@ failures, slightly touch up the D3Test.java Selenium tests to make them pass.
 Although Selenium IDE usually does a good job in the translation, sometimes it
 needs an extra hand.  Refer to the Exercise 3 troubleshooting guide:
 
-https://github.com/wonsunahn/CS1632_Fall2021/blob/master/exercises/3/README.md#tips-for-junit--selenium-problem-solving
+https://github.com/wonsunahn/CS1632_Spring2022/blob/master/exercises/3/README.md#tips-for-junit--selenium-problem-solving
 
 ## Submission
 

@@ -1,5 +1,5 @@
 TEST FIXTURE:
-1. Firefox browser version >= 93, or Chrome browser version >= 94 is installed and launched.
+1. Firefox browser version >= 97, or Chrome browser version >= 98 is installed and launched.
 2. https://cs1632.appspot.com/ is opened on the web browser by typing the URL on the address box.
 3. The Rent-A-Cat system is reset by clicking on the "Reset" link (all three cats available).
 
