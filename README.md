@@ -4,17 +4,17 @@
   * [Task 2: Find three defects and write test cases for them](#task-2-find-three-defects-and-write-test-cases-for-them)
   * [Task 3: Add test cases to test suite and save project](#task-3-add-test-cases-to-test-suite-and-save-project)
   * [Task 4: Export test suite to JUnit class](#task-4-export-test-suite-to-junit-class)
-  * [Submission](#submission)
-    + [GitHub submission](#github-submission)
-    + [Report submission](#report-submission)
-  * [Grading](#grading)
-  * [GradeScope Feedback](#gradescope-feedback)
-  * [Resources](#resources)
+- [Submission](#submission)
+  * [GitHub submission](#github-submission)
+  * [Report submission](#report-submission)
+- [Grading](#grading)
+- [GradeScope Feedback](#gradescope-feedback)
+- [Resources](#resources)
 
 # CS 1632 - Software Quality Assurance
-Spring Semester 2022
+Summer Semester 2022
 
-DUE: Mar 15 (Tuesday), 2022 1:00 PM
+DUE: July 26 (Tuesday), 2022 11:30 AM
 
 **GitHub Classroom Link:** TBD
 
@@ -34,7 +34,7 @@ shared .side project file. So it is especially important that your pull before
 opening the project file and push immediately after you have modified and saved
 the project file. Otherwise, you may get merge conflicts. Merging conflicts is
 possible by using the technique I went over with the
-[Using\_Git](https://github.com/wonsunahn/CS1632_Spring2022/blob/master/lectures/Using_Git.pdf)
+[Using\_Git](https://github.com/wonsunahn/CS1632_Summer2022/blob/master/lectures/Using_Git.pdf)
 slides, but it's best to avoid it.  In the case of a merge conflict, the .side
 file is in JSON format, so it shouldn't be too difficult to patch up.
 
@@ -44,8 +44,6 @@ Write all the test cases in [testplan.md](testplan.md) to test the requirements
 listed in [requirements.md](requirements.md).  Name each test case using the
 IDENTIFIER for the test case.  This is important for the purposes of GradeScope
 autograding.  
-
-Specifically, write the following test scenarios:
 
 ## Task 2: Find three defects and write test cases for them
 
@@ -136,14 +134,14 @@ failures, slightly touch up the D3Test.java Selenium tests to make them pass.
 Although Selenium IDE usually does a good job in the translation, sometimes it
 needs an extra hand.  Refer to the Exercise 3 troubleshooting guide:
 
-https://github.com/wonsunahn/CS1632_Spring2022/blob/master/exercises/3/README.md#tips-for-junit--selenium-problem-solving
+https://github.com/wonsunahn/CS1632_Summer2022/blob/master/exercises/3/README.md#tips-for-junit--selenium-problem-solving
 
-## Submission
+# Submission
 
 Each group will do one submissions to GradeScope as usual.  The submission is
 done in two parts: the GitHub Classroom repository and a report.
 
-### GitHub submission
+## GitHub submission
 
 Submit your github repository to GradeScope at the **Deliverable 3 GitHub**
 link.  Once you submit, GradeScope will run the autograder to grade you and
@@ -153,7 +151,7 @@ resubmit.  Repeat until you don't get deductions.
 Please make sure you have the **D3.side** and **D3Test.java** files in your
 repository.
 
-### Report submission
+## Report submission
 
 Submit your report to GradeScope at the **Deliverable 3 Report** link.  Please
 use the [ReportTemplate.docx](ReportTemplate.docx) file provided in this
@@ -171,7 +169,7 @@ ON A SEPARATE PAGE, write a defect report.  There should be at least 3 defects.
 Each defect should contain all necessary components including REPRODUCTION
 STEPS, EXPECTED BEHAVIOR, OBSERVED BEHAVIOR, etc. described in Deliverable 1.  
 
-## Grading
+# Grading
 
 * Summary and retrospective - 5% 
 * Defect reports - 15%
@@ -179,7 +177,7 @@ STEPS, EXPECTED BEHAVIOR, OBSERVED BEHAVIOR, etc. described in Deliverable 1.
 
 Please review grading\_rubric.txt for details.
 
-## GradeScope Feedback
+# GradeScope Feedback
 
 The GradeScope autograder works in 2 phases:
 
@@ -192,9 +190,16 @@ The GradeScope autograder works in 2 phases:
 If you get deductions, both websites are available to you, so try them out
 yourself.
 
-## Resources
+# Resources
 
 These links are the same ones posted at the end of the slides:
 
+* Selenium IDE Getting Started:
+https://www.selenium.dev/selenium-ide/docs/en/introduction/getting-started
+
 * Selenium IDE Command Reference:  
 https://www.selenium.dev/selenium-ide/docs/en/api/commands
+
+* Selenium WebDriver Tutorial:
+https://www.selenium.dev/documentation/webdriver/
+
