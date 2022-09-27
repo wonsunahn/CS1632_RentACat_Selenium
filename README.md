@@ -12,12 +12,11 @@
 - [Resources](#resources)
 
 # CS 1632 - Software Quality Assurance
-Summer Semester 2022
+Fall Semester 2022
 
-* DUE: July 26 (Tuesday), 2022 11:30 AM
-* Last day of late submission: August 5, 2022 11:30 AM
+* DUE: October 17 (Monday), 2022 before start of class
 
-**GitHub Classroom Link:** https://classroom.github.com/a/IUZ3nglh
+**GitHub Classroom Link:** TBD
 
 ## Description
 
@@ -35,7 +34,7 @@ shared .side project file. So it is especially important that your pull before
 opening the project file and push immediately after you have modified and saved
 the project file. Otherwise, you may get merge conflicts. Merging conflicts is
 possible by using the technique I went over with the
-[Using\_Git](https://github.com/wonsunahn/CS1632_Summer2022/blob/master/lectures/Using_Git.pdf)
+[Using\_Git](https://github.com/wonsunahn/CS1632_Fall2022/blob/master/lectures/Using_Git.pdf)
 slides, but it's best to avoid it.  In the case of a merge conflict, the .side
 file is in JSON format, so it shouldn't be too difficult to patch up.
 
@@ -45,6 +44,70 @@ Write all the test cases in [testplan.md](testplan.md) to test the requirements
 listed in [requirements.md](requirements.md).  Name each test case using the
 IDENTIFIER for the test case.  This is important for the purposes of GradeScope
 autograding.  
+
+### Test fixture
+
+Note the existence of the Test Fixture at the beginning of the test plan.  As
+we learned, a test fixture is a set of fixed preconditions that is common
+across all test cases.  That means the test fixture has to be in place before
+setting up any test-specific preconditions or performing the execution steps.
+That means you will have to use the "open" command to open the target URL and
+also reset the values of the specified cookies at the beginning of each test
+case.
+
+### Setting cookie values
+
+Cookies are name/value pairs that are stored in your web browser to maintain
+some state required by a website.  In our rent-a-cat website, the state that
+needs to be maintained would be which cats have been rented out and which are
+available.  The website creates three boolean name/value pairs to indicate the
+rented state of each cat (true if rented or false if available).  The name of
+each cookie is the ID of each cat: "1", "2", and "3".  These cookies are
+manipulated by JavaScript code that runs on the web browser whenever you push
+on the "Rent" or "Return" buttons.
+
+Since the behavior of many rent-a-cat features are impacted by these cookies,
+it is important that these cookies are set to certain values before testing.
+So how can we set cookies in Selenium?  Fortunately, Selenium IDE provides a
+way to execute arbitrary JavaScript code using the "execute script" command.
+In order to set all values of cookies "1", "2", and "3" to false, you need to
+pass the following JavaScript code to the "execute script" command:
+
+```
+document.cookie = "1=false";document.cookie = "2=false";document.cookie = "3=false";
+```
+
+You need to add that long string as a single line.  If you insert newlines at
+the end of each statement in your head, it is the following JavaScript code:
+
+```
+document.cookie = "1=false";
+document.cookie = "2=false";
+document.cookie = "3=false";
+```
+
+Contrary to how it appears, you are not overwriting the document.cookie object
+over and over again.  The document.cookie object has a special semantic where
+assignment really means that you are adding that cookie to the list of existing
+cookies.  If a cookie with the same name already exists, you will overwrite the
+value.  That is as much you need to know about cookies concerning this
+assignment.  If you want to learn more about cookie semantics, feel free to
+browse the following page:
+
+https://www.w3schools.com/js/js_cookies.asp
+
+You can test your JavaScript code directly on the web browser by entering the
+code in the address bar at the top.  Try entering the following string in the
+address bar while on the Rent-A-Cat page to set all cats to rented.
+
+```
+javascript:document.cookie = "1=true";document.cookie = "2=true";document.cookie = "3=true";void(0)
+```
+
+Then refresh the page and see all the cats disappear!  You may notice the extra
+"void(0)" string in the end.  It is added to have the JavaScript code return an
+undefined value --- otherwise, the web browser will display the value returned
+on a new page, which is not what we want.
 
 ## Task 2: Find three defects and write test cases for them
 
@@ -100,7 +163,7 @@ comments.  Leave other boxes unchecked.
 1. Save the resulting file into "D3Test.java" under the
    src/test/java/edu/pitt/cs test source directory.  .
 
-1. Add the following line to the top of "RedditCatsTest.java":
+1. Add the following line to the top of "D3Test.java":
    ```
    package edu.pitt.cs;
    ```
@@ -128,14 +191,12 @@ You can now run the D3Test JUnit class using Maven:
 mvn test
 ```
 
-Make sure all tests pass by looking at the results (the tests that should
-pass, not the ones that uncover defects of course :).  If there are any
-failures, slightly touch up the D3Test.java Selenium tests to make them
-pass.  Although Selenium IDE usually does a good job in the translation,
-sometimes it needs an extra hand.  Refer to the Exercise 3 troubleshooting
-guide:
+Make sure all tests pass by looking at the results (the tests that should pass,
+not the ones that uncover defects of course :).  If there are any failures,
+slightly touch up the D3Test.java Selenium tests to make them pass.  Refer to
+the Exercise 3 troubleshooting guide:
 
-https://github.com/wonsunahn/CS1632_Summer2022/blob/master/exercises/3/README.md#tips-for-junit--selenium-problem-solving
+https://github.com/wonsunahn/CS1632_Fall2022/blob/master/exercises/3/README.md#tips-for-junit--selenium-problem-solving
 
 # Submission
 
@@ -166,9 +227,10 @@ Everyone should have a title page with:
 On the FIRST PAGE introduction, please describe the division of work between
 group members and also any difficulties you faced while using Selenium.
 
-ON A SEPARATE PAGE, write a defect report.  There should be at least 3 defects.
-Each defect should contain all necessary components including REPRODUCTION
-STEPS, EXPECTED BEHAVIOR, OBSERVED BEHAVIOR, etc. described in Deliverable 1.  
+ON A SEPARATE PAGE, paste a link to your GitHub issues page with (at least)
+three open issues for three defects.  Each defect should contain all necessary
+components including REPRODUCTION STEPS, EXPECTED BEHAVIOR, OBSERVED BEHAVIOR,
+etc. described in Deliverable 1.  
 
 # Grading
 
@@ -193,8 +255,6 @@ yourself.
 
 # Resources
 
-These links are the same ones posted at the end of the slides:
-
 * Selenium IDE Getting Started:
 https://www.selenium.dev/selenium-ide/docs/en/introduction/getting-started
 
@@ -204,3 +264,17 @@ https://www.selenium.dev/selenium-ide/docs/en/api/commands
 * Selenium WebDriver Tutorial:
 https://www.selenium.dev/documentation/webdriver/
 
+* Official W3C XPath specification:
+https://www.w3.org/TR/xpath/
+
+* Unofficial XPath tutorial:
+https://www.w3schools.com/xml/xpath_intro.asp.
+
+* Official W3C CSS selector specification:
+https://www.w3.org/TR/selectors/
+
+* Unofficial CSS selector tutorial:
+https://www.w3schools.com/cssref/css_selectors.asp
+
+* Unofficial HTTP cookie tutorial
+https://www.w3schools.com/js/js_cookies.asp
