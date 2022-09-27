@@ -16,7 +16,7 @@ Fall Semester 2022
 
 * DUE: October 17 (Monday), 2022 before start of class
 
-**GitHub Classroom Link:** TBD
+**GitHub Classroom Link:** https://classroom.github.com/a/vKH5Gadi
 
 ## Description
 
