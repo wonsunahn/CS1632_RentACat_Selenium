@@ -12,11 +12,11 @@
 - [Resources](#resources)
 
 # CS 1632 - Software Quality Assurance
-Fall Semester 2022
+Spring Semester 2023
 
-* DUE: October 17 (Monday), 2022 before start of class
+* DUE: February 28 (Tuesday), 2023 before start of class
 
-**GitHub Classroom Link:** https://classroom.github.com/a/vKH5Gadi
+**GitHub Classroom Link:** TBD
 
 ## Description
 
@@ -163,28 +163,21 @@ comments.  Leave other boxes unchecked.
 1. Save the resulting file into "D3Test.java" under the
    src/test/java/edu/pitt/cs test source directory.  .
 
+1. If you updated your browser since Exercise 3, please re-run
+   selenium-manager to reinstall the web driver.
+
 1. Add the following line to the top of "D3Test.java":
    ```
    package edu.pitt.cs;
    ```
 
-1. As in Exercise 3, you will have to also add these lines to the beginning of the @Before
-setUp() method in D3Test.java, depending on whether you are using Chrome of Firefox:
+1. Also add the following import to get avoid assertThat getting crossed out
+   in VSCode:
+   ```
+   import static org.hamcrest.MatcherAssert.assertThat;
+   ```
 
-   If you are using Chrome:
-   ```
-   System.setProperty("webdriver.chrome.driver", "Chrome/chromedriver-win32.exe");
-   ```
-   Or whatever the path is to your OS compatible Chrome webdriver.  
-
-   If you are using Firefox:
-   ```
-   System.setProperty("webdriver.gecko.driver", "Firefox/geckodriver-win64.exe");
-   System.setProperty("webdriver.firefox.logfile", "/dev/null");
-   ```
-   Or whatever the path is to your OS compatible Firefox webdriver.  
-
-1. Please add the @FixMethodOrder annotation before the D3Test class declaration:
+1. Lastly, please add the @FixMethodOrder annotation before the D3Test class declaration:
 
    ```
    @FixMethodOrder(MethodSorters.NAME_ASCENDING)
@@ -217,7 +210,7 @@ not the ones that uncover defects of course :).  If there are any failures,
 slightly touch up the D3Test.java Selenium tests to make them pass.  Refer to
 the Exercise 3 troubleshooting guide:
 
-https://github.com/wonsunahn/CS1632_Fall2022/blob/main/exercises/3/README.md#tips-for-junit--selenium-problem-solving
+https://github.com/wonsunahn/CS1632_Spring2023/blob/main/exercises/3/README.md#tips-for-junit--selenium-problem-solving
 
 # Submission
 
