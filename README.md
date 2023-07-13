@@ -12,9 +12,9 @@
 - [Resources](#resources)
 
 # CS 1632 - Software Quality Assurance
-Spring Semester 2023
+Summer Semester 2023
 
-* DUE: February 28 (Tuesday), 2023 before start of class
+* DUE: July 25 (Tuesday), 2023 before start of class
 
 **GitHub Classroom Link:** TBD
 
@@ -117,7 +117,7 @@ deliverable).  You may want to do some exploratory testing first to see what
 kind of issues are found before writing automated tests for them.  Think of
 equivalence classes, edge cases and corner cases as we learned so far.
 
-Next, write three additional test cases that fail and uncover those three
+Next, write three additional Selenium test cases that fail and uncover those three
 defects.  Name these test cases in this format: DEFECT[N]-[Requirement Name],
 where N is 1, 2, or 3.  For example,  if you found 2 defects related to the
 FUN-RENT requirement and 1 defect related to the FUN-FEED-A-CAT requirement, you
@@ -210,7 +210,7 @@ not the ones that uncover defects of course :).  If there are any failures,
 slightly touch up the D3Test.java Selenium tests to make them pass.  Refer to
 the Exercise 3 troubleshooting guide:
 
-https://github.com/wonsunahn/CS1632_Spring2023/blob/main/exercises/3/README.md#tips-for-junit--selenium-problem-solving
+https://github.com/wonsunahn/CS1632_Summer2023/blob/main/exercises/3/README.md#tips-for-junit--selenium-problem-solving
 
 # Submission
 
