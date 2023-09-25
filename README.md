@@ -12,9 +12,9 @@
 - [Resources](#resources)
 
 # CS 1632 - Software Quality Assurance
-Summer Semester 2023
+Fall Semester 2023
 
-* DUE: July 25 (Tuesday), 2023 before start of class
+* DUE: October 16 (Monday), 2023 before start of class
 
 **GitHub Classroom Link:** TBD
 
@@ -210,7 +210,7 @@ not the ones that uncover defects of course :).  If there are any failures,
 slightly touch up the D3Test.java Selenium tests to make them pass.  Refer to
 the Exercise 3 troubleshooting guide:
 
-https://github.com/wonsunahn/CS1632_Summer2023/blob/main/exercises/3/README.md#tips-for-junit--selenium-problem-solving
+https://github.com/wonsunahn/CS1632_Fall2023/blob/main/exercises/3/README.md#tips-for-junit--selenium-problem-solving
 
 # Submission
 
