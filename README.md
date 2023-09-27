@@ -16,7 +16,7 @@ Fall Semester 2023
 
 * DUE: October 16 (Monday), 2023 before start of class
 
-**GitHub Classroom Link:** TBD
+**GitHub Classroom Link:** https://classroom.github.com/a/O1rL6QOA
 
 ## Description
 
@@ -101,7 +101,7 @@ code in the address bar at the top.  Try entering the following string in the
 address bar while on the Rent-A-Cat page to set all cats to rented.
 
 ```
-javascript:document.cookie = "1=true";document.cookie = "2=true";document.cookie = "3=true";void(0)
+javascript:{document.cookie = "1=true";document.cookie = "2=true";document.cookie = "3=true";void(0)}
 ```
 
 Then refresh the page and see all the cats disappear!  You may notice the extra
