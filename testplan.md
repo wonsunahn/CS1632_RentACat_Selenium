@@ -69,7 +69,7 @@ POSTCONDITIONS:
 1. The first item in the cat listing is "Rented out".
 2. The second item in the cat listing is "ID 2. Old Deuteronomy".
 3. The third item in the cat listing is "ID 3. Mistoffelees".
-4. The text "Success!" appears beside the "Rent" button.
+4. The text "Success!" is displayed in the element with ID "rentResult"
 ```
 
 ```
@@ -84,7 +84,7 @@ POSTCONDITIONS:
 1. The first item in the cat listing is "ID 1. Jennyanydots".
 2. The second item in the cat listing is "ID 2. Old Deuteronomy".
 3. The third item in the cat listing is "ID 3. Mistoffelees".
-4. The text "Success!" appears beside the "Return" button.
+4. The text "Success!" is displayed in the element with ID "returnResult"
 ```
 
 ```
@@ -106,7 +106,7 @@ EXECUTION STEPS:
 2. Enter "6" into the input box for number of catnips.
 3. Press the "Feed" button.
 POSTCONDITIONS: 
-1. The text "Nom, nom, nom." appears beside the "Feed" button.
+1. The text "Nom, nom, nom." is displayed in the element with ID "feedResult"
 ```
 
 ```
