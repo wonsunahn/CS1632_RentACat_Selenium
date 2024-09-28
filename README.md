@@ -1,6 +1,10 @@
 - [CS 1632 - Software Quality Assurance](#cs-1632---software-quality-assurance)
   * [Description](#description)
   * [Task 1: Write test cases](#task-1-write-test-cases)
+    + [Test fixture](#test-fixture)
+    + [Setting cookie values](#setting-cookie-values)
+    + [Mind your locator strings](#mind-your-locator-strings)
+    + [Race conditions hit again](#race-conditions-hit-again)
   * [Task 2: Find three defects and write test cases for them](#task-2-find-three-defects-and-write-test-cases-for-them)
   * [Task 3: Add test cases to test suite and save project](#task-3-add-test-cases-to-test-suite-and-save-project)
   * [Task 4: Export test suite to JUnit class](#task-4-export-test-suite-to-junit-class)
@@ -108,6 +112,46 @@ Then refresh the page and see all the cats disappear!  You may notice the extra
 "void(0)" string in the end.  It is added to have the JavaScript code return an
 undefined value --- otherwise, the web browser will display the value returned
 on a new page, which is not what we want.
+
+### Mind your locator strings
+
+Just like we learned in Exercise 3, please use locator strings appropriate to
+the test step.  Sometimes, depending on what locator string you use, you may
+not be able to detect bugs in the cs1632-buggier website (mentioned in the
+[GradeScope Feedback](#gradescope-feedback) section).
+
+### Race conditions hit again
+
+For the TEST-9-FEED test case, you will notice a 1 second delay between when
+you hit the "Feed" button and when the cats go "Nom, nom, nom.".  That is
+because cats have self-respect and they will not jostle each other to get to
+the food first.  This delay may cause you to check the "feedResult" element
+prematurely before it gets populated with the response.  Just like for Exercise
+2, you are asked to put in a explicit synchronization using the "wait for
+element visible" command on Selenium IDE.
+
+Which element should you wait for?  Well, the "feedResult" element is already
+visible so you cannot wait for that.  The only feasible thing to do is to wait
+for the "Nom, nom, nom." text to appear in an element, that is, an element with
+that same text is visible.
+
+What locator string would you use to designate this item?  Unfortunately this
+is not a locator that is in one of the suggestions when using the Selenium IDE
+target tool.  You will have to come up with this one yourself.  Should you use
+CSS or XPath?  Now, as we learned, XPath is more expressive compared to CSS and
+looking for an element with a certain text is something only XPath can do.
+XPath is a sequence of HTML elements which can optionally be filtered using a
+predicated between brackets [...].  The locator string we will be using is the
+following:
+
+```
+xpath=//*[@id='feedResult' and text()='Nom, nom, nom.']
+```
+
+This XPath locator designates any element at the leaf of the DOM tree which has
+an ID attribute of 'feedResult' and text that matches 'Nom, nom, nom.' exactly.
+If this element becomes visible, we can safely assume we are ready for the
+test.
 
 ## Task 2: Find three defects and write test cases for them
 
